@@ -24,6 +24,7 @@ class ConfigurationTest extends TestCase
     {
         $configuration = new Configuration(true);
         $configuration->getConfigTreeBuilder();
-        $this->assertFalse(class_exists('Doctrine\Common\Proxy\AbstractProxyFactory', false));
+        $exists = class_exists('Doctrine\Common\Proxy\AbstractProxyFactory', false);
+        $this->assertFalse($exists);
     }
 }

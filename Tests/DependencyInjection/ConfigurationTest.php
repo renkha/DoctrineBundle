@@ -13,7 +13,7 @@ class ConfigurationTest extends TestCase
      */
     public function testGetConfigTreeBuilderDoNotUseDoctrineCommon(): void
     {
-        $configuration = new Configuration(true);
+        new Configuration();
         $this->assertFalse(class_exists('Doctrine\Common\Proxy\AbstractProxyFactory', false));
     }
 }

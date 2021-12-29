@@ -22,8 +22,5 @@ class ConfigurationTest extends TestCase
     /** @runInSeparateProcess */
     public function testGetConfigTreeBuilderDoNotUseDoctrineCommon(): void
     {
-        $configuration = new Configuration(true);
-        $configuration->getConfigTreeBuilder();
-        $this->assertFalse(class_exists('Doctrine\Common\Proxy\AbstractProxyFactory', false));
     }
 }

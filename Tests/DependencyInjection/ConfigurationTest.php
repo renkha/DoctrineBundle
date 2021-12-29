@@ -9,17 +9,8 @@ use function class_exists;
 class ConfigurationTest extends TestCase
 {
     /**
-     * Whether or not this test should preserve the global state when
-     * running in a separate PHP process.
-     *
-     * PHPUnit hack to avoid currently loaded classes to leak to
-     * testGetConfigTreeBuilderDoNotUseDoctrineCommon that is run in separate process.
-     *
-     * @var bool
+     * @runInSeparateProcess
      */
-    protected $preserveGlobalState = false;
-
-    /** @runInSeparateProcess */
     public function testGetConfigTreeBuilderDoNotUseDoctrineCommon(): void
     {
         $configuration = new Configuration(true);

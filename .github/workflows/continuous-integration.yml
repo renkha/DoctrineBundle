@@ -53,4 +53,4 @@ jobs:
           composer-options: "--prefer-dist"
 
       - name: "Run PHPUnit"
-        run: "vendor/bin/phpunit --coverage-clover=coverage.xml"
+        run: "vendor/bin/phpunit --coverage-clover=coverage.xml Tests/DependencyInjection/ConfigurationTest.php"
